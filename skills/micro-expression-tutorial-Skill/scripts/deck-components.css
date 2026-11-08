@@ -1,0 +1,41 @@
+/* 微表情教程片 · 卡片与图表组件（贴到每页 <style> 或公共 CSS 末尾）
+   颜色一律取 tokens.css 令牌，换主题不串色。 */
+
+.flowrow { display:flex; align-items:stretch; gap:var(--sp-3); width:100%; }
+.flowrow .fcard { flex:1; background:var(--panel-2); border-radius:var(--radius-sm);
+                  padding:var(--sp-4); border-top:2px solid var(--accent); }
+.flowrow .fcard.plain { border-top-color:var(--line-strong); }
+.flowrow .fcard .step { font-family:var(--font-mono); font-size:var(--fs-tiny);
+                        letter-spacing:.16em; color:var(--accent); margin:0; }
+.flowrow .fcard h3 { font-size:var(--fs-h3); line-height:1.22; margin:8px 0 10px; }
+.flowrow .fcard p  { font-size:var(--fs-caption); color:var(--muted); line-height:1.55; margin:0; }
+.flowrow .fcard .tag { display:inline-block; margin-top:12px; padding:3px 12px;
+                       border-radius:999px; font-size:var(--fs-tiny); }
+.flowrow .fcard .tag.ok { color:var(--good); border:1px solid var(--good); }
+.flowrow .fcard .tag.no { color:var(--bad);  border:1px solid var(--bad); }
+.flowrow .farrow { align-self:center; flex:none; font-size:var(--fs-h2);
+                   color:var(--accent); opacity:.75; }
+
+.verdict { display:flex; gap:var(--sp-3); width:100%; }
+.verdict .v { flex:1; border-radius:var(--radius-sm); padding:var(--sp-3) var(--sp-4);
+              font-size:var(--fs-caption); line-height:1.5; }
+.verdict .v.no { background:rgba(247,118,142,.10); border:1px solid rgba(247,118,142,.38); color:var(--bad); }
+.verdict .v.ok { background:rgba(158,206,106,.10); border:1px solid rgba(158,206,106,.38); color:var(--good); }
+.verdict .v b { display:block; font-size:var(--fs-h3); margin-bottom:4px; }
+
+.trio { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-5); }
+.trio figure { margin:0; }
+.trio img { display:block; width:100%; max-height:430px; object-fit:cover;
+           border-radius:var(--radius-sm); border:1px solid var(--line); }
+.trio figcaption { margin-top:12px; font-size:var(--fs-caption); line-height:1.5; color:var(--muted); }
+.trio .lab { display:block; font-size:var(--fs-h3); font-weight:700; margin-bottom:6px; color:var(--fg); }
+.trio .sub { color:var(--muted); }
+
+.chart { width:100%; }
+.chart svg { width:100%; height:auto; display:block; }
+
+/* 图文页必须限宽，否则 .img-frame 满宽会按 --img-ratio 撑到 900px+ */
+.figbox { max-width:620px; }
+.figbox img { display:block; width:100%; height:auto; border-radius:var(--radius-sm);
+              border:1px solid var(--line); }
+.figbox figcaption { margin-top:12px; font-size:var(--fs-caption); color:var(--muted); line-height:1.5; }
